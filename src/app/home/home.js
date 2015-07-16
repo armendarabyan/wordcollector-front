@@ -39,9 +39,16 @@ angular.module( 'ngBoilerplate.home', [
  * And of course we define a controller for our route.
  */
 .controller( 'HomeCtrl', function HomeController( $scope ) {
-  $scope.test = function() {
-    alert("test");
+  var realansw = 1;
+  $scope.answer = function(ans) {
+    if (ans !== realansw) {
+      $scope.firstclass = "wrong";
+    } else {
+      $scope.firstclass = "";
+    }
   };
-})
-
-;
+  $scope.first  = "First";
+  $scope.second = "Second";
+  $scope.third  = "Third";
+  $scope.fourth = "Fourth";
+});
